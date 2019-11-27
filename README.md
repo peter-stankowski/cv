@@ -9,10 +9,11 @@ XSLT template driven web project.
 * Templates
   * XSLT
   
-## XSLT Template Parts
+## XML Template Parts
 
 **Main Layout**
 ```
+<?xml version="1.0" encoding="utf-8" ?>
 <layout>
   <sidebar>
   ...Cards
@@ -25,33 +26,34 @@ XSLT template driven web project.
 
 **Cards**
 ```
-<card>
-  <section>
-  ...Components
-  </section>
-  <splitsection>
-  ...Components
-  </splitsection>
+<card center="true/false">
+ <avatar src=""></avatar>
+ <section>
+ ...Components
+ </section>
+ <splitsection>
+ ...Components
+ </splitsection>
 </card>
 ```
 
 **Components**
 ```
-<section>
-  <title></title>
-  <subtitle></subtitle>
-  <text></text>
-  <badges><b></b></badges>
+<section divider="true/false">
+ <title></title>
+ <subtitle></subtitle>
+ <text></text>
+ <badges><b></b></badges>
 </section>
 ```
 
 ```
-<splitsection>
-  <date></date>
-  <title></title>
-  <subtitle></subtitle>
-  <text></text>
-  <badges><b></b></badges>
+<splitsection divider="true/false">
+ <date></date>
+ <title></title>
+ <subtitle></subtitle>
+ <text></text>
+ <badges><b></b></badges>
 </splitsection>
 ```
 
