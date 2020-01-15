@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<layout>
+  
+  <sidebar>
+    <card center="true">
+      <avatar src="https://via.placeholder.com/100x100"></avatar>
+      <section divider="false">
+        <title>Your Name</title>
+        <badges type="light">
+          <b>phone</b>
+          <b>email@email.com</b>
+        </badges>
+      </section>
+    </card>
+
+    <card>
+      <section divider="true">
+        <subtitle>Back End</subtitle>
+        <badges type="primary">
+          <b>...</b>
+          <b>...</b>
+          <b>...</b>
+        </badges>
+      </section>
+     
+      <section divider="true">
+        <subtitle>Front End</subtitle>
+        <badges type="warning">
+          <b>...</b>
+          <b>...</b>
+          <b>...</b>
+        </badges>
+      </section>
+  
+      <section>
+        <subtitle>Other</subtitle>
+        <badges type="info">
+          <b>...</b>
+          <b>...</b>
+          <b>...</b>
+        </badges>
+      </section>
+    </card>
+
+    <card>
+      <section>
+        <subtitle>Interest</subtitle>
+        <badges type="info">
+          <b>...</b>
+          <b>...</b>
+          <b>...</b>
+        </badges>
+      </section>
+    </card>
+  </sidebar>
+  <content>
+    <card>
+      <section>
+        <title>Short Bio</title>
+        <subtitle>
+          My sub title
+        </subtitle>
+        <text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Donec euismod leo in ultricies imperdiet. Phasellus non interdum nibh, 
+          a rhoncus turpis. Sed vel venenatis odio. Suspendisse aliquam tempus placerat. 
+          Donec scelerisque cursus pharetra. Curabitur aliquam mauris id nisl blandit bibendum. 
+        </text>
+      </section>
+    </card>
+
+    <card>
+      <section>
+        <title>Work Experience</title>
+      </section>
+
+      <splitsection divider="true">
+        <date>From – To</date>
+        <title>Job Title</title>
+        <subtitle>Company Name</subtitle>
+        <text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis odio. 
+          Donec viverra aliquam hendrerit. Quisque vehicula est non elit bibendum, in condimentum purus eleifend. 
+          Cras tincidunt augue sapien. Phasellus sodales dapibus odio, id euismod dui convallis vel.
+        </text>
+        <badges type="primary">
+          <b>...</b>
+          <b>...</b>
+          <b>...</b>
+          <b>...</b>
+        </badges>
+        <badges type="warning">
+          <b>...</b>
+          <b>...</b>
+        </badges>
+        <badges type="info">
+          <b>...</b>
+        </badges>
+      </splitsection>
+      <splitsection divider="true">
+        <date>From – To</date>
+        <title>Job Title</title>
+        <subtitle>Company Name</subtitle>
+        <text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis odio.
+          Donec viverra aliquam hendrerit. Quisque vehicula est non elit bibendum, in condimentum purus eleifend.
+          Cras tincidunt augue sapien. Phasellus sodales dapibus odio, id euismod dui convallis vel.
+        </text>
+        <badges type="primary">
+          <b>...</b>
+          <b>...</b>
+          <b>...</b>
+        </badges>
+        <badges type="warning">
+          <b>...</b>
+          <b>...</b>
+        </badges>
+        <badges type="info">
+          <b>...</b>
+        </badges>
+      </splitsection>
+      <splitsection>
+        <date>From – To</date>
+        <title>Job Title</title>
+        <subtitle>Company Name</subtitle>
+        <text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis odio.
+          Donec viverra aliquam hendrerit. Quisque vehicula est non elit bibendum, in condimentum purus eleifend.
+          Cras tincidunt augue sapien. Phasellus sodales dapibus odio, id euismod dui convallis vel.
+        </text>
+        <badges type="primary">
+          <b>...</b>
+          <b>...</b>
+        </badges>
+        <badges type="warning">
+          <b>...</b>
+          <b>...</b>
+        </badges>
+        <badges type="info">
+          <b>...</b>
+        </badges>
+      </splitsection>
+
+    </card>
+
+    <card>
+      <section>
+        <title>Education</title>
+      </section>
+      <splitsection divider="true">
+        <date>From - To</date>
+        <title>College / Uni Name</title>
+        <subtitle>Sub Title</subtitle>
+      </splitsection>
+      <splitsection>
+        <date>From - To</date>
+        <title>College / Uni Name</title>
+        <subtitle>Sub Title</subtitle>
+      </splitsection>
+    </card>
+
+  </content>
+</layout>

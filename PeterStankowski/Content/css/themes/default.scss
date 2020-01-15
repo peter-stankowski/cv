@@ -1,0 +1,82 @@
+﻿// Theme colors
+$primary: #00487C;
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "title": lighten($primary, 10),
+    "title-10": lighten($primary, 5),
+    "subtitle": $primary,
+    "primary": $primary,
+    "primary-10": lighten($primary, 10),
+    "primary-20": lighten($primary, 20),
+    "primary-30": lighten($primary, 30)
+  ),
+  $theme-colors
+);
+
+// Base font
+$font-family-base: 'Inria Serif', serif;
+
+// Badges
+$badge-font-size: 80%;
+
+// List group
+.list-group > li:last-child{
+    border: none;
+}
+
+.text-title.with-fa {
+
+    .fa {
+        margin-top: -1rem;
+        font-size: 4rem;
+        position: absolute;
+        opacity: 0.1;
+        left: 0;
+    }
+}
+
+// Printing
+$print-page-size: a4 !default;
+@media print {
+    .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        box-shadow: none !important;
+
+        .card {
+            box-shadow: none !important;
+            vertical-align: top;
+            margin-bottom: 0px !important;
+        }
+
+        .layout-divider {
+            display: none !important;
+        }
+    }
+
+    main {
+        margin-left: 0px !important;
+    }
+    .navbar{
+        display: none;
+    }
+}
+
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+@import "../bootstrap/reboot";
+@import "../bootstrap/grid";
+@import "../bootstrap/buttons";
+@import "../bootstrap/type";
+@import "../bootstrap/list-group";
+@import "../bootstrap/navbar";
+
+@import "../bootstrap/card";
+@import "../bootstrap/utilities";
+@import "../bootstrap/badge";
+@import "../bootstrap/dropdown";
+
+
+

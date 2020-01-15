@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/layout.css",
+    "inputFile": "Content/layout.scss"
+  },
+  {
+    "outputFile": "Content/bootstrap.css",
+    "inputFile": "Content/css/bootstrap/bootstrap.scss"
+  },
+  {
+    "outputFile": "Content/css/themes/_default.css",
+    "inputFile": "Content/css/themes/default.scss"
+  },
+  {
+    "outputFile": "Scripts/default.es5.js",
+    "inputFile": "Scripts/default.js"
+  }
+]
