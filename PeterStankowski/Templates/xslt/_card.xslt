@@ -17,7 +17,7 @@
 
       <div class="card-body">
         <xsl:attribute name="class">
-          <xsl:if test="@center = 'true'">text-center</xsl:if>
+          <xsl:if test="@center = 'true'">card-body text-center</xsl:if>
         </xsl:attribute>
         <xsl:apply-templates select="section | splitsection" >
           <xsl:with-param name="divider" select="@divider"></xsl:with-param>

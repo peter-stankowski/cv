@@ -1,4 +1,4 @@
-﻿using PeterStankowski.Services;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +20,8 @@ namespace PeterStankowski
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
+
+            ViewEngines.Engines.Add(new CV.Core.Extensions.RazorViewEngineExtension());
 
         }
     }

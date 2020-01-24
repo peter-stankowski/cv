@@ -11,15 +11,15 @@ using System.Xml.Xsl;
 
 namespace PeterStankowski.Services
 {
-    public class XmlLayoutService : ILayoutService
+    public class XmlLayoutService : IXmlLayoutService
     {
-        public string XsltTemplatePath { get; set; }
 
-        public string GetPage(string dataPath)
+        public string GetXmlPage(string templatePath, string dataPath)
         {
-            if (XsltTemplatePath == null) throw new ArgumentNullException("Missing xslt template path. Set XsltTemplatePath for ILayoutService in controller's constructor");
+            if (templatePath == null)
+                throw new ArgumentNullException("Missing xslt template path. Set XsltTemplatePath for ILayoutService in controller's constructor");
 
-            string xsl = XsltTemplatePath;
+            string xsl = templatePath;
             string xml = dataPath;
 
             System.Xml.XPath.XPathDocument doc = new System.Xml.XPath.XPathDocument(xml);
@@ -36,17 +36,4 @@ namespace PeterStankowski.Services
         }
     }
 
-    public class TestExtension
-    {
-        //public XPathNodeIterator GetRows()
-        //{
-        //    var test = new string[] { "test 1", "test 2", "Test 3" };
-
-        //    XmlDocument doc = new XmlDocument();
-
-        //    XElement xmlElements = new XElement("testarray", test.Select(i => new XElement("test", i)));
-
-        //    return doc.CreateNavigator().Select();
-        //}
-    }
 }
