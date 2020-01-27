@@ -1,0 +1,18 @@
+﻿@model List<CV.Core.Models.Section>
+
+@foreach (var sec in Model)
+{
+    if (sec.Title != null)
+    {
+        <h3 class="mb-4 mt-3 text-title">@sec.Title</h3>
+    }
+    if (sec.SubTitle != null)
+    {
+        <h6 class="text-subtitle">@sec.SubTitle</h6>
+    }
+    @Html.Raw(sec.Text)
+    foreach (var badge in sec.Badges)
+    {
+        @Html.Raw(badge.AsHtml())
+    }
+}

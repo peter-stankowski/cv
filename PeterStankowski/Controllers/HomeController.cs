@@ -21,7 +21,15 @@ namespace PeterStankowski.Controllers
             service = _service;
             rservice = _rservice;
         }
+        public HomeController()
+        {
+        }
 
+
+        public ControllerContext GetContext()
+        {
+            return this.ControllerContext;
+        }
 
         // GET: Home
         public ActionResult Index()
@@ -38,7 +46,7 @@ namespace PeterStankowski.Controllers
             var razor = rservice.RenderPage(new RazorConfig()
             {
                 controllerContext = this.ControllerContext,
-                viewPath = "~/Templates/razor/_Default.cshtml",
+                viewPath = "~/Templates/razor/Default.cshtml",
                 viewModel = new RazorLayoutView().Seed()
             });
 

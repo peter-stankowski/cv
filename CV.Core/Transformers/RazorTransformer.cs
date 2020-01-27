@@ -38,6 +38,7 @@ namespace CV.Core.Transformers
         }
         IView view;
 
+       
         public void LoadTemplate(string templatePath)
         {
             viewEngineResult = ViewEngines.Engines.FindPartialView(context, templatePath);
@@ -72,9 +73,11 @@ namespace CV.Core.Transformers
             return writer.ToString();
         }
 
-        public void SetControllerContext(ControllerContext context)
+        public ControllerContext SetControllerContext(ControllerContext context)
         {
             _context = context;
+
+            return _context;
         }
 
        

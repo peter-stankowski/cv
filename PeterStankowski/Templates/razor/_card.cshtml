@@ -2,16 +2,18 @@
 
 @foreach (var card in Model)
 {
-    foreach (var sec in card.Sections)
-    {
-        <div class="card m-auto p-3 border-0 shadow-sm">
+    
+<div class="card m-auto p-3 border-0 shadow-sm">
+    @{
+        if (card.AvatarPath != null)
+        {
             <div class="text-center"><img class="m-auto" src="https://via.placeholder.com/100x100"></div>
-            <div class="card-body">
-                <h3 class="mb-4 mt-3 text-title">@sec.Title</h3>
-                @Html.Raw(sec.Text)
-            </div>
-        </div>
+        }
     }
+    <div class="card-body">
+        @Html.Partial("_section", card.Sections)
+    </div>
+</div>
 
 }
 

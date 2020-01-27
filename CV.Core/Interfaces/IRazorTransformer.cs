@@ -10,7 +10,7 @@ namespace CV.Core.Interfaces
 {
     public interface IRazorTransformer : ITransformer
     {
-        void SetControllerContext(ControllerContext context);
+        ControllerContext SetControllerContext(ControllerContext context);
         void AttachModel(RazorLayoutView model);
 
     }

@@ -27,6 +27,8 @@ namespace CV.Core.Models
 
     public class Card : IHtmlElement
     {
+        public string AvatarPath { get; set; }
+
         List<Section> _sections;
         public List<Section> Sections
         {
@@ -63,6 +65,8 @@ namespace CV.Core.Models
         public string Title { get; set; }
         public string SubTitle { get; set; }
         public string Text { get; set; }
+
+        public List<Badge> Badges { get; set; }
     }
     public class SplitSection
     {
@@ -71,9 +75,19 @@ namespace CV.Core.Models
         public string Text { get; set; }
     }
 
+    public class Badge : IHtmlElement
+    {
+        public string Text { get; set; }
+        public string AsHtml()
+        {
+            return string.Format("<span class='p-2 m-1 badge badge-{0}'>{1}</span>", CssClass, Text);
+        }
+    }
+
     public class IHtmlElement
     {
         public string CssClass { get; set; }
+
     }
 
 }

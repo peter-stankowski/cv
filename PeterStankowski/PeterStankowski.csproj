@@ -364,9 +364,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Templates\razor\_Default.cshtml" />
+    <Content Include="Templates\razor\Default.cshtml" />
     <Content Include="Templates\razor\web.config" />
     <None Include="Templates\razor\_card.cshtml" />
+    <Content Include="Templates\razor\_section.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

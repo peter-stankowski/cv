@@ -19,7 +19,10 @@ namespace CV.Core.Models
             {
 
                 Title = "Peter Stankowski",
-                Text = "test"
+                Badges = new List<Badge>() {
+                    new Badge() { Text="07907 937 649", CssClass="light d-block" },
+                    new Badge() { Text="peter@email.com" , CssClass="light d-block"}
+                }
             };
             var profileCard = new Card()
             {
@@ -27,7 +30,22 @@ namespace CV.Core.Models
                 Sections = new List<Section>() { profileSection }
             };
 
+            var skillCard = new Card()
+            {
+                Sections = new List<Section>() {
+                    new Section()
+                    {
+                        SubTitle = "Back End",
+                        Badges = new List<Badge>()
+                        {
+                            new Badge(){ Text="C#", CssClass="primary"}
+                        }
+                    }
+                }
+            };
+
             sidebar.Cards.Add(profileCard);
+            sidebar.Cards.Add(skillCard);
 
             var returnModel = new RazorLayoutView()
             {
