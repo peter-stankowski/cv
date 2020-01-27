@@ -1,8 +1,8 @@
 # CV ASP.NET MVC Project
 
-XSLT template driven web project.
+XSLT template driven web project. (old)
 
-## Folder structure
+## Folder structure (old)
 
 * Services
   * XmlLayoutService : ILayoutService
