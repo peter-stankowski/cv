@@ -38,12 +38,12 @@ namespace PeterStankowski.Controllers
             );
 
 
-            var razor = rservice.RenderPage(new RazorConfig()
-            {
-                controllerContext = this.ControllerContext,
-                viewPath = "~/Templates/razor/Default.cshtml",
-                viewModel = new RazorLayoutView().Seed()
-            });
+            //var razor = rservice.RenderPage(new RazorConfig()
+            //{
+            //    controllerContext = this.ControllerContext,
+            //    viewPath = "~/Templates/razor/Default.cshtml",
+            //    viewModel = new RazorLayoutView().Seed()
+            //});
 
 
 
