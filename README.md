@@ -5,9 +5,14 @@ XSLT template driven web project. (old)
 ## Folder structure (old)
 
 * Services
-  * XmlLayoutService : ILayoutService
+  * XmlLayout : ILayout
 * Templates
   * XSLT
+  * Razor (to do)
+
+## To Do
+
+* Finish Razor page render service
   
 ## XML Template Parts
 
