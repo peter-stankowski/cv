@@ -23,42 +23,7 @@
       <xsl:value-of select="."/>
     </span>
   </xsl:template>
-  <xsl:template match="badgeList">
-    <xsl:call-template name="listItem">
-      <xsl:with-param name="features" select="@list"/>
-      <xsl:with-param name="type" select="@type"/>
-    </xsl:call-template>
-  </xsl:template>
 
-  <xsl:template name="listItem">
-    <xsl:param name="features"/>
-    <xsl:param name="type"/>
-    <xsl:param name="delimiter" select="','"/>
-    <xsl:choose>
-      <xsl:when test="contains($features, $delimiter)">
-        <span>
-          <xsl:attribute name="class">
-            <xsl:value-of select="concat('p-2 m-1 badge badge-', $type)"/>
-          </xsl:attribute>
-          <xsl:value-of select="normalize-space(substring-before($features, $delimiter))"/>
-        </span>
-        
-        <xsl:variable name="nextValue" select="substring-after($features, 
-                                                                       $delimiter)"/>
-        <xsl:if test="normalize-space($nextValue)">
-          <xsl:call-template name="listItem">
-            <xsl:with-param name="features" select="$nextValue"/>
-            <xsl:with-param name="delimiter" select="$delimiter"/>
-          </xsl:call-template>
-        </xsl:if>
-      </xsl:when>
-      <xsl:otherwise>
-        <b>
-          <xsl:value-of select="$features"/>
-        </b>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
 
   <xsl:template match="links">
     <xsl:apply-templates select="l">

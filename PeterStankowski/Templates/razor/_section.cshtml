@@ -11,8 +11,9 @@
         <h6 class="text-subtitle">@sec.SubTitle</h6>
     }
     @Html.Raw(sec.Text)
-    foreach (var badge in sec.Badges)
+    @Html.Raw(sec.BadgeList.AsHtml())
+    @*foreach (var badge in sec.Badges)
     {
         @Html.Raw(badge.AsHtml())
-    }
+    }*@
 }

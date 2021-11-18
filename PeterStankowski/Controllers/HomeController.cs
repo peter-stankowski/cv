@@ -26,19 +26,14 @@ namespace PeterStankowski.Controllers
         }
 
 
-        public ControllerContext GetContext()
-        {
-            return this.ControllerContext;
-        }
-
         // GET: Home
         public ActionResult Index()
         {
             var html = service.RenderPage(
                 new XmlConfig()
                 {
-                    dataPath = Server.MapPath("~/Templates/Empty.xml"),
-                    templatePath = Server.MapPath("~/Templates/xslt/Default.xslt")
+                    dataPath = Server.MapPath("~/Templates/Peter.xml"),
+                    templatePath = Server.MapPath("~/Templates/xslt2/Default.xslt")
                 }
             );
 
@@ -52,7 +47,7 @@ namespace PeterStankowski.Controllers
 
 
 
-            var uglyHtml = NUglify.Uglify.Html(razor);
+            var uglyHtml = NUglify.Uglify.Html(html);
 
             return View((object)uglyHtml.Code);
         }

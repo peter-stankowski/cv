@@ -327,6 +327,13 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Templates\Empty.xml" />
     <Content Include="Templates\Peter2.xml" />
+    <Content Include="Templates\xslt2\Default.xslt" />
+    <Content Include="Templates\xslt2\DefaultWithParameters.xslt" />
+    <Content Include="Templates\xslt2\_card.xslt" />
+    <Content Include="Templates\xslt2\_components.xslt" />
+    <Content Include="Templates\xslt2\_section.xslt" />
+    <Content Include="Templates\xslt2\_splitsection.xslt" />
+    <Content Include="Templates\xslt2\_stickynavbar.xslt" />
     <Content Include="Templates\xslt\DefaultWithParameters.xslt" />
     <Content Include="Templates\xslt\Default.xslt" />
     <Content Include="Templates\Peter.xml" />

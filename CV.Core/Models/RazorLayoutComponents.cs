@@ -67,6 +67,7 @@ namespace CV.Core.Models
         public string Text { get; set; }
 
         public List<Badge> Badges { get; set; }
+        public BadgeList BadgeList { get; set; }
     }
     public class SplitSection
     {
@@ -84,9 +85,32 @@ namespace CV.Core.Models
         }
     }
 
+    public class BadgeList : IHtmlElement
+    {
+        public string Text { get; set; }
+        public string GroupName { get; set; }
+        public string CssClass { get; set; }
+
+        public string AsHtml()
+        {
+            var badges = "";
+            foreach (string badge in Text.Split(','))
+            {
+                badges += new Badge()
+                {
+                    Text = badge,
+                    CssClass = CssClass
+                }.AsHtml();
+            }
+
+            return AddHr ? $"{badges}<hr />": badges;
+        }
+    }
+
     public class IHtmlElement
     {
         public string CssClass { get; set; }
+        public bool AddHr { get; set; }
 
     }
 

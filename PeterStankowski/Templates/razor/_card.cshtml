@@ -1,19 +1,13 @@
-﻿@model List<CV.Core.Models.Card>
+﻿@model CV.Core.Models.Card
 
-@foreach (var card in Model)
-{
-    
 <div class="card m-auto p-3 border-0 shadow-sm">
     @{
-        if (card.AvatarPath != null)
+        if (Model.AvatarPath != null)
         {
-            <div class="text-center"><img class="m-auto" src="https://via.placeholder.com/100x100"></div>
+            <div class="text-center"><img class="m-auto" src="@Model.AvatarPath"></div>
         }
     }
-    <div class="card-body">
-        @Html.Partial("_section", card.Sections)
+    <div class="card-body @Model.CssClass">
+        @Html.Partial("_section", Model.Sections)
     </div>
 </div>
-
-}
-
