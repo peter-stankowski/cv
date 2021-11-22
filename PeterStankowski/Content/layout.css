@@ -77,7 +77,7 @@ main {
 
 /*sticky navbar*/
 .sticky-navbar {
-  min-height: 200px;
+  min-height: 60px;
   background-color: #fff;
   opacity: 0.8; }
 

@@ -21,7 +21,7 @@
       display: none !important; }
   main {
     margin-left: 0px !important; }
-  .navbar {
+  .navbar, .sticky-navbar {
     display: none; } }
 
 *,

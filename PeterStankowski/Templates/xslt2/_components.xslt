@@ -30,7 +30,7 @@
       <xsl:with-param name="type" select="@type"></xsl:with-param>
     </xsl:apply-templates>
   </xsl:template>
-  <xsl:template match="l">
+  <xsl:template match="links/l">
     <xsl:param name="type"/>
     <a>
       <xsl:attribute name="href">

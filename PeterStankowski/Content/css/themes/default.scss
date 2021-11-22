@@ -58,7 +58,7 @@ $print-page-size: a4 !default;
     main {
         margin-left: 0px !important;
     }
-    .navbar{
+    .navbar, .sticky-navbar {
         display: none;
     }
 }

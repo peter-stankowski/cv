@@ -2,7 +2,7 @@
   xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl"
 >
   <xsl:template match="stickynavbar">
-    <div class="sticky-navbar fixed-right p-3">
+    <div class="sticky-navbar fixed-right p-1">
       <xsl:apply-templates select="links"/>
     </div>
   </xsl:template>
