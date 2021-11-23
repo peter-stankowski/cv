@@ -13,6 +13,9 @@
     <xsl:apply-templates select="b" >
       <xsl:with-param name="type" select="@type"></xsl:with-param>
     </xsl:apply-templates>
+    <xsl:apply-templates select="l">
+      <xsl:with-param name="type" select="@type"></xsl:with-param>
+    </xsl:apply-templates>
   </xsl:template>
   <xsl:template match="b">
     <xsl:param name="type"/>
@@ -23,7 +26,18 @@
       <xsl:value-of select="."/>
     </span>
   </xsl:template>
-
+  <xsl:template match="badges/l">
+    <xsl:param name="type"/>
+    <a>
+      <xsl:attribute name="href">
+        <xsl:value-of select="@href"/>
+      </xsl:attribute>
+      <xsl:attribute name="class">
+        <xsl:value-of select="concat('d-block text-left btn btn-link btn-',$type)"/>
+      </xsl:attribute>
+      <xsl:value-of select="."/>
+    </a>
+  </xsl:template>
 
   <xsl:template match="links">
     <xsl:apply-templates select="l">
