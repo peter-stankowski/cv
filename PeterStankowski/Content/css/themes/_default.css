@@ -8,11 +8,18 @@
   opacity: 0.1;
   left: 0; }
 
+@page {
+  size: A4;
+  margin: 0; }
+
 @media print {
   .sidebar {
     position: relative !important;
     width: 100% !important;
-    box-shadow: none !important; }
+    box-shadow: none !important;
+    page-break-after: always !important;
+    width: 21cm;
+    height: 29.7cm; }
     .sidebar .card {
       box-shadow: none !important;
       vertical-align: top;
@@ -20,7 +27,11 @@
     .sidebar .layout-divider {
       display: none !important; }
   main {
-    margin-left: 0px !important; }
+    margin-left: 0px !important;
+    width: 21cm;
+    height: 29.7cm; }
+    main .badge {
+      display: none; }
   .navbar, .sticky-navbar {
     display: none; } }
 

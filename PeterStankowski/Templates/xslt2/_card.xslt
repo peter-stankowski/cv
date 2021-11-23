@@ -3,7 +3,9 @@
 >
   <xsl:template match="card">
     <xsl:param name="plain" select="@plain"></xsl:param>
-
+    <xsl:if test="@pagebreak = 'true'">
+      <div class="pagebreak"></div>
+    </xsl:if>
     <div>
       <xsl:attribute name="class">
         <xsl:choose>

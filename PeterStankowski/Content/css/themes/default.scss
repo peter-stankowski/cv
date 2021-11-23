@@ -37,12 +37,20 @@ $badge-font-size: 80%;
 }
 
 // Printing
-$print-page-size: a4 !default;
+$print-page-size: A4 !default;
+@page {
+    size: $print-page-size;
+    margin: 0;
+}
+
 @media print {
     .sidebar {
         position: relative !important;
         width: 100% !important;
         box-shadow: none !important;
+        page-break-after: always !important;
+        width: 21cm;
+        height: 29.7cm;
 
         .card {
             box-shadow: none !important;
@@ -57,10 +65,17 @@ $print-page-size: a4 !default;
 
     main {
         margin-left: 0px !important;
+        width: 21cm;
+        height: 29.7cm;
+
+        .badge {
+            display: none;
+        }
     }
     .navbar, .sticky-navbar {
         display: none;
     }
+  
 }
 
 @import "../bootstrap/functions";

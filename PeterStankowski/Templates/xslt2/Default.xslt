@@ -27,7 +27,7 @@
           </span>
           <xsl:apply-templates select="sidebar"></xsl:apply-templates>
         </div>
-
+        
         <main class="pb-3 pt-3">
           <!--<nav class="navbar fixed-top navbar-light bg-light">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
